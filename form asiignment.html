@@ -1,57 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student's Registration form</title>
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        legend {
+            color: #333;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+
+        button[type="button"] {
+            background-color: #ccc;
+        }
+    </style>
 </head>
+
 <body>
     <h1>Student Registration Form</h1>
     <form action="student.php" method="post">
         <label for="name">Name:</label>
-        <input type="text" name="name id="name" placeholder="Enter your name" required><br>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required>
 
         <label for="dateofbirth">Date of Birth:</label>
-        <input type="date" name="Date of Birth id="dateofbirth" required>
-        <br>
+        <input type="date" name="dateofbirth" id="dateofbirth" required>
 
-        <fieldset aria-required="true">
+        <fieldset>
             <legend>Gender</legend>
-           <input type="radio" id="male" name="gender" value="male"> 
-            <label for="male">Male</label><br>
-
+            <input type="radio" id="male" name="gender" value="male">
+            <label for="male">Male</label>
             <input type="radio" id="female" name="gender" value="female">
             <label for="female">Female</label>
-            
         </fieldset>
 
         <label for="address">Address:</label>
-        <textarea name="address" id="address" cols=100% rows="3"></textarea>
-
-        <br>
+        <textarea name="address" id="address" cols="30" rows="3"></textarea>
 
         <label for="telephone">Telephone:</label>
         <input type="tel" name="telephone" id="telephone" placeholder="Enter Phone Number" pattern="[0-9]{10}">
-        <br>
+
         <label for="email">Email Address:</label>
-        <input type="email" id="email" required>
-        <br>
+        <input type="email" name="email" id="email" required>
+
         <fieldset>
             <legend>Course</legend>
-            <input type="radio" name="course" id="BSc. Economics and Statistics">
-            <label for="BSc. Economics and Statistics">BSc. Economics and Statistics</label>
+            <input type="radio" name="course" id="BScEconomicsStatistics">
+            <label for="BScEconomicsStatistics">BSc. Economics and Statistics</label>
             <br>
-            <input type="radio" name="course" id="BSc. Mathematics">
-            <label for="BSc. Mathematics">BSc. Mathematics</label>
+            <input type="radio" name="course" id="BScMathematics">
+            <label for="BScMathematics">BSc. Mathematics</label>
             <br>
-            <input type="radio" name="course" id="BA Arts">
-            <label for="BA Arts">BA Arts</label>
+            <input type="radio" name="course" id="BAArts">
+            <label for="BAArts">BA Arts</label>
         </fieldset>
-       
+
         <button type="submit">Submit</button>
         <button type="button">Cancel</button>
-
     </form>
-    
 </body>
+
 </html>
